@@ -1,0 +1,12 @@
+# Ignore paths that contain generated content.
+bower_components/
+vendor/
+Mahnungen/
+inc/PHPWord/
+img/sav/
+
+#Ignore everything but the "sites" folder ( for non core developer )
+.buildpath
+.project
+bib.sublime-project
+bib.sublime-workspace

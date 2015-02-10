@@ -1,0 +1,26 @@
+{
+    "name": "author/appname",
+    "description": "The description of my awesome PHP application",
+    "require": {
+        "php": ">=5.3.0",
+        "slim/slim": "2.*",
+        "zordius/lightncandy": "0.19",
+        "shark/simple_html_dom": "dev-master",
+        "phpword/phpword": "dev-master"
+        
+    },
+     "license": "MIT",
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "john.doe@somedomain.com"
+        }
+    ],
+    "autoload": {
+         "files": ["inc/db.config.inc.php",
+                    "inc/config.inc.php"
+        ]
+        
+    }
+    
+}

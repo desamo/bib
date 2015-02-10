@@ -1,0 +1,92 @@
+SIGNATUR CHECKEN				//überprüft ob eine Buch Signatur bereits vorhanden ist
+TYPE 'Get'
+URL: /api/signature/:sig 		//signatur wird einfach angehängt ohne :
+
+	{
+		"result":false, 		//false wenn Signatur noch nicht existiert, true wenn sie schon existiert, dürfte klar sein ;)
+		"signatur":"TS-AS-12"
+	}
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+POST book							GET book
+URL : /api/book						URL: /api/book/:id
+TYPE : JSON							Response wie POST
+
+	{	
+		"Id":"0", 		// wenn nicht 0 wird das buch editiert nicht neu angelegt
+		"Titel":"a",
+		"Autor":"c",
+		"Buchreihe":"b",
+		"Anmerkung":"f",
+		"Beschreibung":"e ",
+		"Verlag":"d",
+		"Isbn":"124565456",
+		"Signatur":"as-as-12",
+		"Alter":"12",
+		"Stufe":"3",
+		"Ausleihfrist":"14",
+		"Jahr":"2006",
+		"Schlagwoerter":"g"
+	}
+Response
+
+	{	
+		"Titel":"a",
+		"Autor":"c",
+		"Buchreihe":"b",
+		"Anmerkung":"f",
+		"Beschreibung":"e ",
+		"Verlag":"d",
+		"Isbn":"124565456",
+		"Signatur":"as-as-12",
+		"Alter":"12",
+		"Stufe":"3",
+		"Ausleihfrist":"14",
+		"Jahr":"2006",
+		"Schlagwoerter":"g"
+		"Id":"neue_id"
+	}
+oder ERROR je nachdem ;)
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+POST leser							GET leser
+URL : /api/leser					URL: /api/leser/:id
+TYPE JSON							Response wie post natürlich nur mit id aus db und keiner neuen
+	{
+		"id":"0",      // id wenn nicht 0 wird der leser editiert
+		"name":"Rudhani",
+		"vorname":"Edon",
+		"strasse":"Beethoven Str.",
+		"hausnr":"100",
+		"kuerzel":"Rud-1",
+		"geburtsjahr":"2005",
+		"klasse":"4b",
+		"gruppe":"1",
+		"geschlecht":"m"
+	}
+Response
+	{
+		"id":"neue_id",      
+		"name":"Rudhani",
+		"vorname":"Edon",
+		"strasse":"Beethoven Str.",
+		"hausnr":"100",
+		"kuerzel":"Rud-1",
+		"geburtsjahr":"2005",
+		"klasse":"4b",
+		"gruppe":"1",
+		"geschlecht":"m"
+	}
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+
+

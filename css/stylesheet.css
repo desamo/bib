@@ -1,0 +1,140 @@
+* {
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+
+    
+}
+html, body {  
+     font-family:Lato, Tahoma, Verdana, Arial, sans-serif;
+    }
+#main, header {
+	width:98%;
+	max-width: 1280px;
+}
+header {
+	
+	color: black;	
+	height: 200px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin:auto;
+	margin:3px auto 0;
+	z-index: 1;
+}
+
+header::after {
+  content: "";
+  background-image: url(../img/wiesengrund2.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+#head-links, #head-rechts{
+	width: 25%;
+	
+}
+#head-links{
+	padding:0 35px;
+	
+}
+#head-mitte{
+	width: 50%;
+	text-align:center;
+	z-index: 1;
+}
+header h1  {font-size: 2.925em; margin-bottom: 0.3em;} 
+header h2  {font-size: 1.575em;} 
+header p   {font-size: 0.75em;}
+
+#loginbox {
+	margin:0 auto;
+	padding: 20px;
+	width: 450px;
+	min-height: 200px;
+	background-color: #c6d5e5;
+	text-align: center;
+}
+
+#main {
+	margin:20px auto; 
+	
+	overflow:hidden;
+}
+#Info, #Inhalt, #loginbox, nav, header {
+	border-radius: 15px;
+	border: 2px solid grey;
+}
+#Info  {
+	float:right;
+	width: 20%;
+	background-color: #eac887; 
+}
+#Info p {
+	padding: 15px;
+	margin:0 ;
+	
+}
+nav  {
+	float:left;
+	width: 20%;
+	background-color: #bacbb1; 
+	overflow:hidden;
+  	list-style: none;
+  	margin: 0;
+    padding: 0;
+  	width: 20%;
+}
+ 
+nav ul   {
+	
+	line-height: 30px; /*für 20 Pixel Zeilenhöhe*/
+    color: #3A4A3D;
+    margin: 0px;
+    padding: 16px;
+
+  }
+nav ul {
+	margin:0;
+	padding:0;
+	list-style: none
+}
+nav ul a  {color: inherit;}
+nav a:link {text-decoration:none;}
+nav a:hover {
+  	background:  #AABEAD url("../img/hover.png") left center no-repeat;
+  
+  	padding-bottom: 8px;
+  }
+nav a:active {
+  	color: #696a68; 
+  	background-color: 
+  	#d5e7cb;
+  }
+ 
+nav a {
+  background-color: #bacbb1; 
+  border-bottom: 1px solid #AABEAD;
+  
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+#Inhalt {
+	margin:auto;
+	width:58%;
+	background-color: #c6d5e5;
+	padding: 15px;
+}
+
+
