@@ -27,7 +27,7 @@
 <title>Bibliothekensystem</title>
 </head>
 <?php 
-	 require "/vendor/autoload.php";
+	 require "vendor/autoload.php";
   
  ?>
  

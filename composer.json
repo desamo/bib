@@ -18,8 +18,12 @@
     ],
     "autoload": {
          "files": ["inc/db.config.inc.php",
-                    "inc/config.inc.php"
+                    "inc/config.inc.php",
+                    "class/mysql_class_pdo.php",
+                    "class/show_pages_class.php",
+                    "class/ausgabe_class.php"
         ]
+		
         
     }
     

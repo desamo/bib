@@ -66,7 +66,7 @@ include ("./templates/template.tmpl");
 					<?php
 						$suchtext = "";
 						$Kategorie = "Name";
-						$page = 1;
+						$page = "1";
 						
 						if (isset($_REQUEST['suchenach'])) $suchtext = $_REQUEST['suchenach'];  
 						if (isset($_REQUEST['categorie'])) $Kategorie = $_REQUEST['categorie'];
@@ -103,7 +103,7 @@ include ("./templates/template.tmpl");
 					
 					<?php 
 					 
-					
+						
 					
 						if ($suchtext != "") {
 						
@@ -124,6 +124,7 @@ include ("./templates/template.tmpl");
 
 							$result = json_decode($resp) ;
 							show_results($result) ;
+							
 						}
 
 						

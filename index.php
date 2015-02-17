@@ -25,7 +25,7 @@ include ("header.php");
 					event.preventDefault();
 			
 					
-					var action = "/bib/api/login";
+					var action = "./api/login";
 					var form_data = {
 							username: $("#username").val(),
 							password : sha256($("#password").val())

@@ -416,7 +416,7 @@ function quick_search (){
   $suchbegriff = $app->request()->get('term');
  
    if ($cat == 'Buch') {
-    $sql = "SELECT  Titel, Verlag, Autor, Buchreihe, Schlagwörter FROM buecher WHERE MATCH(Titel, Autor, Verlag, Buchreihe, Schlagwörter) AGAINST( :suchparameter IN BOOLEAN MODE) LIMIT 0,15";
+    $sql = "SELECT DISTINCT Titel, Verlag, Autor, Buchreihe, Schlagwörter FROM buecher WHERE MATCH(Titel, Autor, Verlag, Buchreihe, Schlagwörter) AGAINST( :suchparameter IN BOOLEAN MODE) LIMIT 0,15";
   } else if ($cat == 'Name') {
     $sql = "SELECT  Name, Vorname FROM leser WHERE MATCH(Name, Vorname) AGAINST(:suchparameter IN BOOLEAN MODE) LIMIT 0,15";
   }

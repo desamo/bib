@@ -6,7 +6,7 @@ if (!isset($_SESSION['USER'])) {
 				exit ;
 	}
 
-include("../class/mysql_class_pdo.php");
+include("../vendor/autoload.php");
 
 	
 	$datum = strtotime("-1 week");
@@ -44,7 +44,7 @@ include("../class/mysql_class_pdo.php");
 					ON a.buchid = b.ID LEFT JOIN leser as c ON a.Ausleiher = c.ID WHERE a.Rückgabedatum < :datum AND c.Gruppe <> :2 ORDER BY Klasse, Ausleiher asc" ;
 
 	$db = new database() ;
-
+	
 	$db->query($sql);
 	$db->bind(":datum", $datum) ;
 	$db->bind(":2", "2") ;

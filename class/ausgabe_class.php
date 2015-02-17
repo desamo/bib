@@ -122,7 +122,7 @@
 	}
 
 
-function create_sql_string ($categorie) {
+function create_sql4_string ($categorie) {
 	$buch_sql ="SELECT DISTINCT
 				b.Ausleihdatum,
 		    	b.Ausleiher,
